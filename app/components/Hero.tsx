@@ -1,16 +1,17 @@
+'use client';
 import Image from "next/image";
 import img from "../assets/style.jpg";
 
 export default function Hero() {
     return (
         <>
-            {/* ================= HERO SECTION ================= */}
+            {/* HERO SECTION */}
             <section className="bg-[#F4F1EF] overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-1">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-                        {/* LEFT CONTENT */}
+                    {/* LEFT CONTENT */}
                         <div>
                             <h1
                                 className="
@@ -75,7 +76,7 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        {/* RIGHT IMAGE */}
+                    {/* RIGHT IMAGE */}
                         <div className="relative hidden md:flex justify-end">
                             <Image
                                 src={img}
@@ -86,13 +87,12 @@ export default function Hero() {
                                 className="object-contain scale-90 lg:scale-100"
                             />
                         </div>
-
                     </div>
                 </div>
             </section>
 
-            {/* ================= BRAND STRIP ================= */}
-            <section className="bg-black py-6 sm:py-10">
+            {/* BRAND STRIP */}
+            <section className="bg-black -mt-1 sm:py-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     <div
                         className="

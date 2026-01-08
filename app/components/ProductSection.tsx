@@ -1,11 +1,10 @@
+'use client';
 import ProductCard from "./ProductCard";
 import Link from "next/link";
 
 export default function ProductSection({ title, products, viewAll }: any) {
     return (
         <section className="py-10 sm:py-14 text-black">
-
-            {/* TITLE */}
             <h2 className="text-2xl sm:text-3xl font-black
                      text-center mb-8 sm:mb-10">
                 {title}
@@ -24,8 +23,7 @@ export default function ProductSection({ title, products, viewAll }: any) {
                     <ProductCard key={p.id} product={p} />
                 ))}
             </div>
-
-            {/* VIEW ALL */}
+            
             {viewAll && (
                 <div className="text-center mt-8 sm:mt-10">
                     <Link href="/products">
