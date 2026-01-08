@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <>
             {/* HERO SECTION */}
-            <section className="bg-[#F4F1EF] overflow-hidden -mt-6 sm:-mt-10 lg:-mt-20">
+            <section className="bg-[#F4F1EF] overflow-hidden mt-4 -mt-6 sm:-mt-10 lg:-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:py-10">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20 items-center">
@@ -53,29 +53,31 @@ export default function Hero() {
                             {/* STATS */}
                             <div
                                 className="
-                                    flex flex-col sm:flex-row
-                                    justify-center md:justify-start
-                                    gap-6 sm:gap-10
-                                    mt-6 sm:mt-8 lg:mt-12
-                                    text-black">
-                                <div>
-                                    <p className="text-2xl sm:text-4xl font-bold">200+</p>
-                                    <p className="text-sm text-gray-500 mt-1">
-                                        International Brands
+                                        flex flex-row
+                                        justify-between sm:justify-center md:justify-start
+                                        gap-4 sm:gap-10
+                                        mt-6 sm:mt-8 lg:mt-12
+                                        text-black">
+                                <div className="text-center">
+                                    <p className="text-xl sm:text-4xl font-bold">200+</p>
+                                    <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                                        Brands
                                     </p>
                                 </div>
 
-                                <div className="sm:border-l sm:border-gray-300 sm:pl-10">
-                                    <p className="text-2xl sm:text-4xl font-bold">2,000+</p>
-                                    <p className="text-sm text-gray-500 mt-1">
-                                        High-Quality Products
+                                {/* LINE + STAT */}
+                                <div className="border-l border-gray-300 pl-4 sm:pl-10 text-center">
+                                    <p className="text-xl sm:text-4xl font-bold">2,000+</p>
+                                    <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                                        Products
                                     </p>
                                 </div>
 
-                                <div className="sm:border-l sm:border-gray-300 sm:pl-10">
-                                    <p className="text-2xl sm:text-4xl font-bold">30,000+</p>
-                                    <p className="text-sm text-gray-500 mt-1">
-                                        Happy Customers
+                                {/* LINE + STAT */}
+                                <div className="border-l border-gray-300 pl-4 sm:pl-10 text-center">
+                                    <p className="text-xl sm:text-4xl font-bold">30k+</p>
+                                    <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                                        Customers
                                     </p>
                                 </div>
                             </div>
@@ -104,6 +106,7 @@ export default function Hero() {
                             className="object-contain w-[220px]"
                         />
                     </div>
+
                 </div>
             </section>
 
