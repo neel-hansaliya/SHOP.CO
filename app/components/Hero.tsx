@@ -10,7 +10,7 @@ export default function Hero() {
             <section className="bg-[#F4F1EF] overflow-hidden -mt-6 sm:-mt-10 lg:-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:py-10">
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20 items-center">
 
                         {/* LEFT CONTENT */}
                         <div className="text-center md:text-left">
@@ -44,7 +44,6 @@ export default function Hero() {
                                         py-2.5 sm:py-3
                                         rounded-full
                                         text-sm sm:text-base
-                                        cursor-pointer
                                         font-medium
                                         transition">
                                     Shop Now
@@ -56,34 +55,33 @@ export default function Hero() {
                                 className="
                                     flex flex-col sm:flex-row
                                     justify-center md:justify-start
-                                    gap-8 sm:gap-10
-                                    mt-5 sm:mt-8 lg:mt-12
+                                    gap-6 sm:gap-10
+                                    mt-6 sm:mt-8 lg:mt-12
                                     text-black">
-
                                 <div>
                                     <p className="text-2xl sm:text-4xl font-bold">200+</p>
-                                    <p className="text-sm sm:text-md text-gray-500 mt-1">
+                                    <p className="text-sm text-gray-500 mt-1">
                                         International Brands
                                     </p>
                                 </div>
 
                                 <div className="sm:border-l sm:border-gray-300 sm:pl-10">
                                     <p className="text-2xl sm:text-4xl font-bold">2,000+</p>
-                                    <p className="text-sm sm:text-md text-gray-500 mt-1">
+                                    <p className="text-sm text-gray-500 mt-1">
                                         High-Quality Products
                                     </p>
                                 </div>
 
                                 <div className="sm:border-l sm:border-gray-300 sm:pl-10">
                                     <p className="text-2xl sm:text-4xl font-bold">30,000+</p>
-                                    <p className="text-sm sm:text-md text-gray-500 mt-1">
+                                    <p className="text-sm text-gray-500 mt-1">
                                         Happy Customers
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* RIGHT IMAGE */}
+                        {/* DESKTOP / TABLET IMAGE */}
                         <div className="relative hidden md:flex justify-center lg:justify-end">
                             <Image
                                 src={img}
@@ -91,16 +89,26 @@ export default function Hero() {
                                 width={600}
                                 height={600}
                                 priority
-                                className="object-contain scale-75 md:scale-90 lg:scale-100"
+                                className="object-contain scale-90 md:scale-95 lg:scale-100"
                             />
                         </div>
+                    </div>
 
+                    {/* MOBILE IMAGE (JUST ABOVE BRAND STRIP) */}
+                    <div className="md:hidden mt-8 flex justify-center">
+                        <Image
+                            src={img}
+                            alt="Fashion Models"
+                            width={300}
+                            height={300}
+                            className="object-contain w-[220px]"
+                        />
                     </div>
                 </div>
             </section>
 
             {/* BRAND STRIP */}
-            <section className="bg-black -mt-4 sm:-mt-8 lg:-mt-10 py-6 sm:py-8">
+            <section className="bg-black -mt-6 sm:-mt-8 lg:-mt-10 py-6 sm:py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     <div
                         className="
@@ -118,7 +126,6 @@ export default function Hero() {
                         <span className="font-serif">GUCCI</span>
                         <span className="font-black">PRADA</span>
                         <span className="font-light">Calvin Klein</span>
-
                     </div>
                 </div>
             </section>
