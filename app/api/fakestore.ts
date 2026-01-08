@@ -25,40 +25,56 @@
 
 const BASE = "https://fakestoreapi.com";
 
-/* Helper to handle fetch responses safely */
-const handleResponse = async (res: Response) => {
-    if (!res.ok) {
-        // This captures the HTML error page but throws an error instead of trying to parse it as JSON
-        throw new Error(`API Error: ${res.status} ${res.statusText}`);
-    }
+// Common headers to prevent 403 Forbidden errors on Vercel
+const headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Accept": "application/json",
+};
 
-    const contentType = res.headers.get("content-type");
-    if (!contentType || !contentType.includes("application/json")) {
-        throw new Error("Expected JSON response but received something else.");
+/* PRODUCTS */
+export const getAllProducts = async () => {
+    const res = await fetch(`${BASE}/products`, {
+        cache: "no-store",
+        headers: headers
+    });
+
+    if (!res.ok) {
+        throw new Error(`API Error: ${res.status} ${res.statusText}`);
     }
 
     return res.json();
 };
 
-/* PRODUCTS */
-export const getAllProducts = async () =>
-    fetch(`${BASE}/products`, { cache: "no-store" }).then(handleResponse);
-
-export const getProductById = async (id: number) =>
-    fetch(`${BASE}/products/${id}`).then(handleResponse);
+export const getProductById = async (id: number) => {
+    const res = await fetch(`${BASE}/products/${id}`, { headers });
+    if (!res.ok) throw new Error("Product not found");
+    return res.json();
+};
 
 /* CART */
-export const getCartById = async (id: number) =>
-    fetch(`${BASE}/carts/${id}`).then(handleResponse);
+export const getCartById = async (id: number) => {
+    const res = await fetch(`${BASE}/carts/${id}`, { headers });
+    if (!res.ok) throw new Error("Cart not found");
+    return res.json();
+};
 
 /* USERS */
-export const getUserById = async (id: number) =>
-    fetch(`${BASE}/users/${id}`).then(handleResponse);
+export const getUserById = async (id: number) => {
+    const res = await fetch(`${BASE}/users/${id}`, { headers });
+    if (!res.ok) throw new Error("User not found");
+    return res.json();
+};
 
 /* AUTH */
-export const loginUser = async (username: string, password: string) =>
-    fetch(`${BASE}/auth/login`, {
+export const loginUser = async (username: string, password: string) => {
+    const res = await fetch(`${BASE}/auth/login`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+            ...headers,
+            "Content-Type": "application/json"
+        },
         body: JSON.stringify({ username, password }),
-    }).then(handleResponse);
+    });
+    if (!res.ok) throw new Error("Login failed");
+    return res.json();
+};
