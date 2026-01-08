@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <>
             {/* HERO SECTION */}
-            <section className="bg-[#F4F1EF] overflow-hidden -mt-20">
+            <section className="bg-[#F4F1EF] overflow-hidden -mt-6 sm:-mt-10 lg:-mt-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 lg:py-10">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20 items-center">
@@ -16,7 +16,7 @@ export default function Hero() {
                         <div className="text-center md:text-left">
                             <h1
                                 className="
-                                    text-[30px]
+                                    text-[28px]
                                     sm:text-[40px]
                                     md:text-[48px]
                                     lg:text-[64px]
@@ -37,6 +37,7 @@ export default function Hero() {
                                 <button
                                     className="
                                         mt-6 sm:mt-8
+                                        w-full sm:w-auto
                                         bg-black hover:bg-gray-800
                                         text-white
                                         px-8 sm:px-10
@@ -56,9 +57,9 @@ export default function Hero() {
                                     flex flex-col sm:flex-row
                                     justify-center md:justify-start
                                     gap-8 sm:gap-10
-                                    mt-6 sm:mt-8
-
+                                    mt-5 sm:mt-8 lg:mt-12
                                     text-black">
+
                                 <div>
                                     <p className="text-2xl sm:text-4xl font-bold">200+</p>
                                     <p className="text-sm sm:text-md text-gray-500 mt-1">
@@ -90,15 +91,16 @@ export default function Hero() {
                                 width={600}
                                 height={600}
                                 priority
-                                className="object-contain scale-90 md:scale-95 lg:scale-100"
+                                className="object-contain scale-75 md:scale-90 lg:scale-100"
                             />
                         </div>
+
                     </div>
                 </div>
             </section>
 
             {/* BRAND STRIP */}
-            <section className="bg-black -mt-6 sm:-mt-10 py-8 sm:py-10">
+            <section className="bg-black -mt-4 sm:-mt-8 lg:-mt-10 py-6 sm:py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     <div
                         className="
@@ -116,6 +118,7 @@ export default function Hero() {
                         <span className="font-serif">GUCCI</span>
                         <span className="font-black">PRADA</span>
                         <span className="font-light">Calvin Klein</span>
+
                     </div>
                 </div>
             </section>
