@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import ProductSection from "./components/ProductSection";
 import Box from "../app/components/Box";
 import { getAllProducts } from "./api/fakestore";
+import FeedBack from "./components/FeedBack";
 
 export default function HomePage() {
   // Initialize state for data and loading
@@ -44,6 +45,7 @@ export default function HomePage() {
       <hr className="max-w-7xl mx-auto border-black" />
       <ProductSection title="TOP SELLING" products={products.slice(4, 8)} viewAll />
       <Box />
+      <FeedBack />
     </>
   );
 }
