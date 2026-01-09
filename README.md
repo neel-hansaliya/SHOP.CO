@@ -63,7 +63,7 @@ VS Code (or any code editor)
 
 📥 Clone the Repository
 
-git clone https://github.com/your-username/shop.co.git
+git clone https://github.com/neel-hansaliya/SHOP.CO.git
 
 📂 Go to Project Folder
 
