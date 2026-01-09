@@ -56,11 +56,6 @@ Make sure you have the following installed on your PC:
 
 Node.js (v16 or above)
 
-Git
-
-VS Code (or any code editor)
-
-
 📥 Clone the Repository
 
 git clone https://github.com/neel-hansaliya/SHOP.CO.git
