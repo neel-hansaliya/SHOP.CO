@@ -48,5 +48,31 @@ This project demonstrates real-world frontend architecture, API integration, and
 
 ---
 
-## 🔐 Demo Login Credentials
+🚀 How to Run This Project
 
+📌 Prerequisites
+
+Make sure you have the following installed on your PC:
+
+Node.js (v16 or above)
+
+Git
+
+VS Code (or any code editor)
+
+
+📥 Clone the Repository
+
+git clone https://github.com/your-username/shop.co.git
+
+📂 Go to Project Folder
+
+cd shop.co
+
+📦 Install Dependencies
+
+npm install
+
+▶️ Run the Development Server
+
+npm run dev
